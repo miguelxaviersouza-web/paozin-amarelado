@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Conquista do Norte e Oeste do Paraná</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Sansita:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>A Conquista do Norte e Oeste</h1>
+            <p class="subtitle">A epopeia dos migrantes na formação do Paraná do século XX</p>
+            <a href="#historia" class="btn-primary">Explorar História</a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Paraná Histórico</a>
+            <ul class="nav-links">
+                <li><a href="#historia">A História</a></li>
+                <li><a href="#migrantes">Os Migrantes</a></li>
+                <li><a href="#cidades">Cidades Planejadas</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section id="historia" class="content-section">
+            <h2>O Ciclo da Terra Roxa e do Café</h2>
+            <hr class="divider">
+            <p>
+                Em meados do século XX, o interior do Paraná transformou-se no grande eldorado agrícola do Brasil. 
+                A lendária <strong>terra roxa</strong> — um solo fértil de origem vulcânica —, aliada ao clima propício, 
+                atraiu levas de famílias que buscavam no trabalho a promessa de vida nova.
+            </p>
+            <p>
+                Sob a sombra imponente das <em>araucárias</em>, a mata fechada deu lugar a vastos cafezais, que impulsionaram 
+                o desenvolvimento econômico do estado e desenharam uma nova geografia social.
+            </p>
+        </section>
+
+        <section id="migrantes" class="content-section">
+            <h2>Origens da Migração</h2>
+            <hr class="divider">
+            <div class="cards-grid">
+                
+                <div class="card">
+                    <div class="card-header nordeste">
+                        <h3>Nordestinos</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Fugindo das secas históricas, os retirantes trouxeram a força de trabalho, a cultura vibrante e a perseverança para desbravar o interior bravio.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header paulista">
+                        <h3>Paulistas</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Com vasta experiência no cultivo do café, trouxeram técnicas agrícolas, capitais de investimento e impulsionaram as primeiras estruturas comerciais.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header mineiro">
+                        <h3>Mineiros</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Em busca de novas fronteiras agrícolas e terras férteis, contribuíram decisivamente para a formação de vilas, fazendas e tradições rurais.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cidades" class="content-section highlight-box">
+            <h2>O Surgimento de Londrina e Maringá</h2>
+            <p>
+                Diferente de outras regiões do país, o Norte do Paraná passou por um processo intenso de urbanização planejada, 
+                liderado por companhias colonizadoras. Cidades como Londrina e Maringá foram desenhadas com avenidas largas, 
+                zonas agrícolas integradas e rápida infraestrutura de transporte.
+            </p>
+            <button id="btn-curiosidade" class="btn-secondary">Ver Curiosidade Histórica</button>
+            <div id="curiosidade-texto" class="hidden-text">
+                <p>💡 <em>Londrina recebeu esse nome como homenagem prestada pelos colonizadores ingleses à cidade de Londres ("Little London").</em></p>
+            </div>
+        </section>
+
+        <section id="galeria" class="content-section">
+            <h2>Inspiração Expressionista</h2>
+            <hr class="divider">
+            <p>
+                A identidade visual e conceitual deste projeto homenageia o expressionismo de fundo social brasileiro, 
+                retratando a intensidade, as dores e a dignidade do trabalhador do campo.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Projeto de Resgate Histórico e Cultural do Paraná. Desenvolvido para a Web.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
