@@ -1,4 +1,4 @@
-/* RESET E CONFIGURAÇÕES GERAIS */
+/* RESET E ESTILOS GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +7,15 @@
 
 body {
     font-family: 'Merriweather', Georgia, serif;
-    background-color: #0d060e; /* Fundo preto profundo com nuance roxa */
+    background-color: #0d060e;
     color: #e2d6e2;
     line-height: 1.8;
     scroll-behavior: smooth;
 }
 
-/* HERO SECTION / BANNER DE ENTRADA */
+/* HERO SECTION */
 .hero {
-    position: relative;
-    height: 70vh;
+    height: 60vh;
     background: linear-gradient(135deg, #2a001a 0%, #0d060e 100%);
     display: flex;
     align-items: center;
@@ -27,7 +26,6 @@ body {
 }
 
 .hero-content {
-    z-index: 2;
     max-width: 800px;
 }
 
@@ -45,8 +43,24 @@ body {
     margin-bottom: 25px;
 }
 
+/* BADGES DE CATEGORIA */
+.badge {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 0.85rem;
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.badge-historia { background-color: #800020; color: #fff; }
+.badge-geografia { background-color: #4a0080; color: #fff; }
+.badge-artes { background-color: #990033; color: #fff; }
+
 /* BOTÕES */
-.btn-primary, .btn-secondary {
+.btn-primary {
     display: inline-block;
     padding: 12px 28px;
     font-family: 'Sansita', sans-serif;
@@ -54,33 +68,15 @@ body {
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
     background-color: #ff0033;
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(255, 0, 51, 0.4);
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #cc0029;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 0, 51, 0.6);
-}
-
-.btn-secondary {
-    background-color: #330033;
-    color: #ff6680;
-    border: 1px solid #ff0033;
-    margin-top: 15px;
-}
-
-.btn-secondary:hover {
-    background-color: #ff0033;
-    color: #ffffff;
 }
 
 /* NAVBAR */
@@ -126,7 +122,7 @@ body {
     color: #ff3344;
 }
 
-/* LAYOUT E SEÇÕES */
+/* CONTAINER PRINCIPAL */
 .container {
     max-width: 1000px;
     margin: 40px auto;
@@ -139,7 +135,7 @@ body {
 
 h2 {
     font-family: 'Sansita', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #ff3344;
     margin-bottom: 10px;
 }
@@ -151,7 +147,13 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* CARDS GRID */
+.section-intro {
+    font-size: 1.1rem;
+    color: #cca3cc;
+    margin-bottom: 15px;
+}
+
+/* CARDS DE MIGRANTES */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -169,7 +171,7 @@ h2 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(128, 0, 128, 0.3);
+    box-shadow: 0 8px 20px rgba(128, 0, 128, 0.4);
 }
 
 .card-header {
@@ -177,39 +179,86 @@ h2 {
     text-align: center;
 }
 
-.card-header.nordeste { background-color: #4a0033; }
-.card-header.paulista { background-color: #660022; }
-.card-header.mineiro { background-color: #33004d; }
+.card-header.nordeste { background-color: #5c0038; }
+.card-header.paulista { background-color: #800020; }
+.card-header.mineiro { background-color: #3b0066; }
 
 .card-header h3 {
     color: #ffffff;
     font-family: 'Sansita', sans-serif;
+    font-size: 1.4rem;
 }
 
 .card-body {
     padding: 20px;
-    font-size: 0.95rem;
 }
 
-/* CAIXA EM DESTAQUE */
+.card-body h4 {
+    color: #ff6680;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* DESTAQUES */
 .highlight-box {
     background-color: #1a0520;
     border-left: 4px solid #ff0033;
-    padding: 30px;
+    padding: 20px 25px;
+    margin-top: 20px;
     border-radius: 0 8px 8px 0;
 }
 
-.hidden-text {
-    display: none;
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #26082e;
-    border-radius: 6px;
-    color: #ffb3c1;
+.highlight-box h3 {
+    color: #ff3344;
+    font-family: 'Sansita', sans-serif;
+    margin-bottom: 8px;
 }
 
-.hidden-text.active {
+/* GALERIA DE IMAGENS */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background-color: #18051c;
+    border: 1px solid #330033;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     display: block;
+}
+
+.gallery-caption {
+    padding: 12px;
+}
+
+.gallery-caption h4 {
+    color: #ff3344;
+    font-family: 'Sansita', sans-serif;
+    font-size: 1rem;
+}
+
+.gallery-caption p {
+    font-size: 0.82rem;
+    color: #b399b3;
 }
 
 /* RODAPÉ */
@@ -227,4 +276,5 @@ footer {
     .hero h1 { font-size: 2.2rem; }
     .hero .subtitle { font-size: 1rem; }
     .nav-container { flex-direction: column; gap: 10px; }
+    .gallery-grid { grid-template-columns: 1fr; }
 }
