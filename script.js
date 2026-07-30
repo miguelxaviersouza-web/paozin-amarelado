@@ -1,29 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Botão para mostrar/esconder a curiosidade histórica
-    const btnCuriosidade = document.getElementById('btn-curiosidade');
-    const curiosidadeTexto = document.getElementById('curiosidade-texto');
-
-    if (btnCuriosidade && curiosidadeTexto) {
-        btnCuriosidade.addEventListener('click', () => {
-            curiosidadeTexto.classList.toggle('active');
-
-            if (curiosidadeTexto.classList.contains('active')) {
-                btnCuriosidade.textContent = 'Ocultar Curiosidade';
-            } else {
-                btnCuriosidade.textContent = 'Ver Curiosidade Histórica';
-            }
-        });
-    }
-
-    // Efeito suave de rolagem para os links da barra de navegação
-    const navLinks = document.querySelectorAll('.nav-links a');
+    // Rolagem suave para os links do menu
+    const navLinks = document.querySelectorAll('.nav-links a, .btn-primary');
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const targetId = link.getAttribute('href');
             
-            if (targetId.startsWith('#')) {
+            if (targetId && targetId.startsWith('#')) {
                 e.preventDefault();
                 const targetElement = document.querySelector(targetId);
                 
@@ -34,6 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             }
+        });
+    });
+
+    // Efeito sutil ao passar o cursor nas imagens da galeria
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.borderColor = '#ff0033';
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.borderColor = '#330033';
         });
     });
 
